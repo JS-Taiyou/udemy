@@ -4,24 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { RecipesComponent } from './recipes/recipes.component';
-import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
-import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
-import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { EncabezadoComponent } from './encabezado/encabezado.component';
+import { RecetasComponent } from './recetas/recetas.component';
+import { RecetaListaComponent } from './recetas/receta-lista/receta-lista.component';
+import { RecetaDetalladaComponent } from './recetas/receta-detallada/receta-detallada.component';
+import { RecetaInstanciaComponent } from './recetas/receta-lista/receta-instancia/receta-instancia.component';
+import { ListaComprasComponent } from './lista-compras/lista-compras.component';
+import { EdicionComprasComponent } from './lista-compras/edicion-compras/edicion-compras.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    RecipesComponent,
-    RecipeListComponent,
-    RecipeDetailComponent,
-    RecipeItemComponent,
-    ShoppingListComponent,
-    ShoppingEditComponent
+    EncabezadoComponent,
+    RecetasComponent,
+    RecetaListaComponent,
+    RecetaDetalladaComponent,
+    RecetaInstanciaComponent,
+    ListaComprasComponent,
+    EdicionComprasComponent
   ],
   imports: [
     BrowserModule,
