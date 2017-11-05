@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  caracteristicaMostrada = 1;
+  onNavigate(caracteristica: number) {
+    this.caracteristicaMostrada = caracteristica;
+  }
 }

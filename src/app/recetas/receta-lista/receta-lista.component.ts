@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 import { Receta } from '../receta.model';
 
@@ -9,11 +9,18 @@ import { Receta } from '../receta.model';
 })
 export class RecetaListaComponent implements OnInit {
   recetas: Receta[] = [
-    new Receta('A Test Receta', 'This is simply a test', 'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg'),
-    new Receta('A Test Receta', 'This is simply a test', 'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg')
+    new Receta('Pollo con mole', 'Poshito con mole poblano, para 6 personas',
+    'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg'),
+    new Receta('Bacalao a la Vizcaína', 'Un pececito que alcanza para 10 personas',
+      'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg')
   ];
+  @Output() elementoSeleccionado = new EventEmitter<Receta>();
 
   constructor() { }
+
+  onElementoSeleccionado(receta: Receta) {
+    this.elementoSeleccionado.emit(receta);
+  }
 
   ngOnInit() {
   }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Ingrediente } from '../compartido/ingrediente.model';
 
+
 @Component({
   selector: 'app-lista-compras',
   templateUrl: './lista-compras.component.html',
@@ -14,6 +15,10 @@ export class ListaComprasComponent implements OnInit {
   ];
 
   constructor() { }
+
+  agregarNuevo(nuevo: Ingrediente) {
+    this.ingredientes.push(nuevo);
+  }
 
   ngOnInit() {
   }

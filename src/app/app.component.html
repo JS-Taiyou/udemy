@@ -1,9 +1,9 @@
-<app-encabezado></app-encabezado>
+<app-encabezado (caracteristicaRequerida)="onNavigate($event)"></app-encabezado>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recetas></app-recetas>
-      <app-lista-compras></app-lista-compras>
+      <app-recetas *ngIf="caracteristicaMostrada === 1"></app-recetas>
+      <app-lista-compras *ngIf="caracteristicaMostrada === 2"></app-lista-compras>
     </div>
   </div>
 </div>
